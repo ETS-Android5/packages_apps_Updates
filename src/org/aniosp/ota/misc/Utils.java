@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2017 The LineageOS Project
  * Copyright (C) 2019 The PixelExperience Project
+ * Copyright (C) 2022 AniOSP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pixelexperience.ota.misc;
+package org.aniosp.ota.misc;
 
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
@@ -34,12 +35,12 @@ import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.pixelexperience.ota.controller.UpdaterService;
-import org.pixelexperience.ota.model.MaintainerInfo;
-import org.pixelexperience.ota.model.Update;
-import org.pixelexperience.ota.model.UpdateBaseInfo;
-import org.pixelexperience.ota.model.UpdateInfo;
-import org.pixelexperience.ota.model.UpdateStatus;
+import org.aniosp.ota.controller.UpdaterService;
+import org.aniosp.ota.model.MaintainerInfo;
+import org.aniosp.ota.model.Update;
+import org.aniosp.ota.model.UpdateBaseInfo;
+import org.aniosp.ota.model.UpdateInfo;
+import org.aniosp.ota.model.UpdateStatus;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -159,9 +160,6 @@ public class Utils {
         String buildType = getBuildType();
         if (buildType.equals("OFFICIAL")){
             return String.format(Constants.OTA_URL, SystemProperties.get(Constants.PROP_DEVICE), SystemProperties.get(Constants.PROP_BUILD_VERSION));
-        }else{
-            return String.format(Constants.OTA_CI_URL, SystemProperties.get(Constants.PROP_DEVICE), SystemProperties.get(Constants.PROP_BUILD_VERSION));
-        }
     }
 
     public static String getMaintainerURL(String username) {

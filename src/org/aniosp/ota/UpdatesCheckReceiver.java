@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2017 The LineageOS Project
  * Copyright (C) 2019 The PixelExperience Project
+ * Copyright (C) 2022 AniOSP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pixelexperience.ota;
+package org.aniosp.ota;
 
 import android.app.AlarmManager;
 import android.app.NotificationChannel;
@@ -29,10 +30,10 @@ import android.util.Log;
 import androidx.core.app.NotificationCompat;
 
 import org.json.JSONException;
-import org.pixelexperience.ota.controller.ABUpdateInstaller;
-import org.pixelexperience.ota.download.DownloadClient;
-import org.pixelexperience.ota.misc.Utils;
-import org.pixelexperience.ota.model.UpdateStatus;
+import org.aniosp.ota.controller.ABUpdateInstaller;
+import org.aniosp.ota.download.DownloadClient;
+import org.aniosp.ota.misc.Utils;
+import org.aniosp.ota.model.UpdateStatus;
 
 import java.io.File;
 import java.io.IOException;
